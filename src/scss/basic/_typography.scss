@@ -1,0 +1,74 @@
+/**
+ * Typography
+ */
+
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: #383838;
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+  background-color: #383838;
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #6b6b6b;
+}
+
+html {
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+body {
+  overflow: hidden !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: $fz-body;
+  font-family: $ff-body;
+  color: $color-body;
+  font-weight: 400;
+  @media #{$layout-tablet} {
+    font-size: $fz-body - 2;
+  }
+
+  @media #{$layout-mobile-lg} {
+    font-size: $fz-body - 3;
+  }
+}
+
+/* Checkbox & Radio Styles */
+input:not([type="checkbox"]):not([type="radio"]),
+select,
+textarea {
+  padding: 8px;
+  width: 100%;
+  border-top: 0;
+  border-right: 0;
+  border-bottom: 2px solid #bdc3c7;
+  border-left: 0;
+  transition: border-bottom-color 0.15s ease-in;
+  &:focus {
+    outline: 0;
+    border-bottom-color: $color-primary;
+  }
+}
+input[type="checkbox"],
+input[type="radio"] {
+  margin-right: 8px;
+}
+textarea {
+  resize: vertical;
+}
